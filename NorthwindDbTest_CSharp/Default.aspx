@@ -87,7 +87,7 @@
             <section class="col-12 mt-3">
                 <h3>How to submit</h3>
                 <p>
-                    After you have finished work on the project, please ZIP up the appropriate solution and email to:
+                    After you have finished work on the project, please email a link to your GitHub repository containing your work to:
                 </p>
                 <address>
                     <strong>Wendy Tarkowski</strong><br />
@@ -99,5 +99,4 @@
             </section>            
         </div>
     </main>
-
 </asp:Content>
