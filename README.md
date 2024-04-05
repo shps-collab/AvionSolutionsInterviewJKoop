@@ -5,7 +5,7 @@ and go about implementing them.  We will look at the code you write and the end 
 during a possible interview.  This test consists of implementing two requirements that are detailed below.
 
 ## Prerequisites
-* This test requires you be able to work with a simple Visual Studio solution.  A community version of Visual Studio can be found here: [https://visualstudio.microsoft.com/vs/community/](https://visualstudio.microsoft.com/vs/community/)
+This test requires you be able to work with a simple Visual Studio solution.  A community version of Visual Studio can be found here: [https://visualstudio.microsoft.com/vs/community/](https://visualstudio.microsoft.com/vs/community/)
 
 ## Take the test
 In order to take this test, please fork the repository and perform your work in your own local repository.\
