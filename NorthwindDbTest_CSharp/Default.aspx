@@ -93,7 +93,7 @@
                     <strong>Wendy Tarkowski</strong><br />
                     Senior Recruiting/BD Capture<br />
                     Avion Solutions, Inc.<br />
-                    <a href="mailto:Support@example.com">wendy.tarkowski@avionsolutions.com</a><br />
+                    <a href="mailto:wendy.tarkowski@avionsolutions.com">wendy.tarkowski@avionsolutions.com</a><br />
                     256.489.6015
                 </address>
             </section>            
