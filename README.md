@@ -14,9 +14,9 @@ When finished, please see the [How To Submit](#how-to-submit) section for guidan
 ## About this test
 ### JavaScript Libraries
 This project includes the following JavaScript libraries:
-* jQuery 3.4.1
-* Bootstrap 5.2
-* Bootstrap Icons 1.10
+* jQuery 3.7.1
+* Bootstrap 5.3.3
+* Bootstrap Icons 1.11.3
 
 ### Requirement #1
 The Products page currently loads all products in the database.  The customer would like to expand the Products page to include a filter to sort out products that are not available for order.
