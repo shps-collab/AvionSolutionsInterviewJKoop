@@ -18,12 +18,12 @@
                             </div>
                             <div class="d-flex flex-wrap justify-content-end" style="grid-column-gap: 1rem;">
                                 <div class="form-check mr-3 align-self-center">
-                                    <asp:CheckBox ID="chkAvailableOnly" runat="server" Checked="false" Text="Show only available products" />
+                                    <asp:CheckBox ID="chkAvailableOnly" runat="server" OnCheckedChanged="chkAvailableOnly_Changed" AutoPostBack="True" Text="Show only available products" />
                                 </div>
                                 <div>
                                     <div class="input-group">
                                         <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" placeholder="Search by product name..."></asp:TextBox>
-                                        <asp:LinkButton ID="btnSearch" runat="server" CssClass="btn btn-secondary">
+                                        <asp:LinkButton ID="btnSearch" runat="server" CssClass="btn btn-secondary" OnClick="btnSearch_Clicked" AutoPostBack="True">
                                             <i class="bi bi-search"></i>
                                         </asp:LinkButton>
                                     </div>
@@ -42,7 +42,11 @@
                                 OnPreRender="gvProducts_PreRender" 
                                 OnDataBound="gvProducts_DataBound">
                                 <Columns>
-                                    <asp:BoundField DataField="Name" HeaderText="Name" />
+                                    <asp:TemplateField HeaderText="Name" >
+                                        <ItemTemplate>
+                                            <%# $"<a href=\"{Eval("Id")}\">{Eval("Name")}</a>" %>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:BoundField DataField="QuantityPerUnit" HeaderText="Qty Per Unit" />
                                     <asp:TemplateField HeaderText="Unit Price">
                                         <ItemTemplate>

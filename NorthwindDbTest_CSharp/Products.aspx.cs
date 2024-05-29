@@ -31,7 +31,16 @@ namespace NorthwindDbTest_CSharp
 
                 if (products != null)
                 {
-                    gvProducts.DataSource = productViewModelService.CreateViewModel(products).OrderBy(x => x.Name);
+                    System.Diagnostics.Debug.WriteLine("LOADING!!!");
+                    if(chkAvailableOnly.Checked && txtSearch.Text.Length > 0){
+                        gvProducts.DataSource = productViewModelService.CreateViewModel(products).Where(x => x.Name.ToLower().Contains(txtSearch.Text)).Where(x => x.IsAvailable == true);
+                    }else if (txtSearch.Text.Length > 0){
+                        gvProducts.DataSource = productViewModelService.CreateViewModel(products).Where(x => x.Name.ToLower().Contains(txtSearch.Text));
+                    }else if (chkAvailableOnly.Checked){
+                        gvProducts.DataSource = productViewModelService.CreateViewModel(products).Where(x => x.IsAvailable == true);
+                    }else{
+                        gvProducts.DataSource = productViewModelService.CreateViewModel(products).OrderBy(x => x.Name);
+                    }
                     gvProducts.DataBind();
                 }
             }
@@ -62,5 +71,22 @@ namespace NorthwindDbTest_CSharp
 
             lblRecordCount.Text = $"Showing 1 to {gv.Rows.Count} of {gv.Rows.Count} entries";
         }
+
+        protected void chkAvailableOnly_Changed(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("TEST Checked!!!");
+
+            LoadProducts();
+        }
+
+        protected void btnSearch_Clicked(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("TEST Button!!!");
+
+            LoadProducts();
+        }
+
+
+
     }
 }
