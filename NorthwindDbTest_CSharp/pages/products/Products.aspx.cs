@@ -13,6 +13,8 @@ namespace NorthwindDbTest_CSharp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("Bah!!!");
+
             if (!Page.IsPostBack)
             {
                 LoadProducts();

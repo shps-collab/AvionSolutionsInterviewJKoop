@@ -3,7 +3,7 @@
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Products</li>
             </ol>
         </nav>
@@ -44,7 +44,7 @@
                                 <Columns>
                                     <asp:TemplateField HeaderText="Name" >
                                         <ItemTemplate>
-                                            <%# $"<a href=\"{Eval("Id")}\">{Eval("Name")}</a>" %>
+                                            <%# $"<a href=\"Details?id={Eval("Id")}\">{Eval("Name")}</a>" %>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="QuantityPerUnit" HeaderText="Qty Per Unit" />

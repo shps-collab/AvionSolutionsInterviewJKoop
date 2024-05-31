@@ -10,6 +10,9 @@ namespace NorthwindDbTest_CSharp
             var settings = new FriendlyUrlSettings();
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
+            routes.MapPageRoute("Products", "Products", "~/pages/products/Products.aspx");
+            routes.MapPageRoute("Details", "Products/Details", "~/pages/products/details/Details.aspx");
+            //"{controller=Home}/{action=Index}/{id?}";)
         }
     }
 }
