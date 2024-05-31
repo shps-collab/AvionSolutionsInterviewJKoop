@@ -12,7 +12,6 @@ namespace NorthwindDbTest_CSharp
             routes.EnableFriendlyUrls(settings);
             routes.MapPageRoute("Products", "Products", "~/pages/products/Products.aspx");
             routes.MapPageRoute("Details", "Products/Details", "~/pages/products/details/Details.aspx");
-            //"{controller=Home}/{action=Index}/{id?}";)
         }
     }
 }
