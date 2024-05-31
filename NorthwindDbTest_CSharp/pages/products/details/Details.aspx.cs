@@ -28,7 +28,6 @@ namespace NorthwindDbTest_CSharp
             // collection.
             NameValueCollection pColl = Request.Params;
 
-            System.Diagnostics.Debug.WriteLine("Test text");
             int id = 0;
             try
             {
@@ -118,7 +117,6 @@ namespace NorthwindDbTest_CSharp
         {
             using (OrdersRepository ordersRepo = new OrdersRepository())
             {
-                System.Diagnostics.Debug.WriteLine("Made it to orders repo");
                 OrderViewModelService orderViewModelService = new OrderViewModelService();
                 IEnumerable<Order> orders = ordersRepo
                     .GetAll()

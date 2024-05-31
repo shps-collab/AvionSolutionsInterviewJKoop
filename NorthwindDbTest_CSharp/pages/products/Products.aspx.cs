@@ -13,8 +13,6 @@ namespace NorthwindDbTest_CSharp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Bah!!!");
-
             if (!Page.IsPostBack)
             {
                 LoadProducts();
@@ -33,7 +31,7 @@ namespace NorthwindDbTest_CSharp
 
                 if (products != null)
                 {
-                    System.Diagnostics.Debug.WriteLine("LOADING!!!");
+                    
                     if(chkAvailableOnly.Checked && txtSearch.Text.Length > 0){
                         gvProducts.DataSource = productViewModelService.CreateViewModel(products).Where(x => x.Name.ToLower().Contains(txtSearch.Text)).Where(x => x.IsAvailable == true);
                     }else if (txtSearch.Text.Length > 0){
@@ -76,8 +74,6 @@ namespace NorthwindDbTest_CSharp
 
         protected void chkAvailableOnly_Changed(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("TEST Checked!!!");
-
             LoadProducts();
         }
 
