@@ -44,7 +44,7 @@
                                 <Columns>
                                     <asp:TemplateField HeaderText="Name" >
                                         <ItemTemplate>
-                                            <%# $"<a href=\"Details?id={Eval("Id")}\">{Eval("Name")}</a>" %>
+                                            <%# $"<a href=\"/Products/Details?id={Eval("Id")}\">{Eval("Name")}</a>" %>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="QuantityPerUnit" HeaderText="Qty Per Unit" />
